@@ -11,7 +11,7 @@
 
             var randomName = [];		// oluşturulan rastgele isim dizisi
 
-            en_words['names'] = 
+            		en_words['names'] = 
 			[
 				'beach', 
 				'book', 
@@ -24,7 +24,7 @@
 				'planet', 
 				'telephone'
 			];
-            en_words['adjectives'] = 
+            		en_words['adjectives'] = 
 			[
 				'dirty',
 				'disgusting',
@@ -34,7 +34,7 @@
 				'sad',
 				'sour',
 				'tasty',
-                'ugly',
+                		'ugly',
 				'wet'
 			];
 			tr_words['names'] = 
@@ -47,82 +47,92 @@
 				'kulaklık',
 				'kumsal',
 				'masa',
-                'rüya',
+                		'rüya',
 				'telefon'
 			];
-            tr_words['adjectives'] = 
+            		tr_words['adjectives'] = 
 			[
 				'çirkin',
 				'ekşi',
 				'engebeli',
-                'iğrenç',
-                'şişman',
-                'kirli',
-                'mutlu',
-                'nemli',
-                'tatlı',
-                'üzgün'
-                
-			];
+        			'iğrenç',
+                		'şişman',
+                		'kirli',
+                		'mutlu',
+                		'nemli',
+                		'tatlı',
+                		'üzgün'
+                	];
 
-            $(document).ready(function(){
+            $(document).ready(function()
+            {
                 $("#clear").on('click', function(){
                     $("#sonuclar").html('');
                     randomName = [];
-                });
+            });
 
-                $("#findNewName").on('click', function(){
+                $("#findNewName").on('click', function()
+                {
                     var lang = $("input[name='language']:checked").val();
                     console.log(lang);
 
                     var word;
-					var name_index;		
+		    var name_index;		
                     var adj_index;
 
-                    if(lang == 'tr'){
+                    if (lang == 'tr')
+                    {
                         var tr_name_length = tr_words['names'].length;		// türkçe isimlerin uzunluğunu öğren
                         var tr_adj_length = tr_words['adjectives'].length;	// türkçe sıfatların uzunluğu
 
                         var count = 0;
 
-                        while(count < 10){
+                        while (count < 10)
+                        {
                             name_index = Math.floor(Math.random() * tr_name_length);
                             adj_index = Math.floor(Math.random() * tr_adj_length);
                             word = tr_words['adjectives'][adj_index] + "_" + tr_words['names'][name_index];
-                            if(randomName.indexOf(word) == -1){
+                            if (randomName.indexOf(word) == -1)
+                            {
                                 randomName.push(word);
                                 count ++;
                             }
                         }
                     }
 
-                    else if(lang == 'en'){
+                    else if (lang == 'en')
+                    {
                         var en_name_length = en_words['names'].length;
                         var en_adj_length = en_words['adjectives'].length;
 
                         var count = 0;
 
-                        while(count < 10){
+                        while (count < 10)
+                        {
                             name_index = Math.floor(Math.random() * en_name_length);
                             adj_index = Math.floor(Math.random() * en_adj_length);
-                            word = en_words['adjectives'][adj_index]  + "_" +en_words['names'][name_index];
-                            if(randomName.indexOf(word) == -1){
+                            word = en_words['adjectives'][adj_index] + "_" + en_words['names'][name_index];
+                            if (randomName.indexOf(word) == -1)
+                            {
                                 randomName.push(word);
                                 count ++;
                             }
                         }
                     }
-                    else{
+                    else
+                    {
                         alert('dil secmediniz');
-
                     }
 
                     press(randomName);		// ekrana bastır.
                 });
             });
-            function press(array_names){
+            
+            function press(array_names)
+            {
                 var toWrite = "";
-                randomName.forEach(function(word) {
+                randomName.forEach(function(word) 
+                {
                     toWrite += word + "<br>";
                 });
                 $("#result").html(toWrite);
