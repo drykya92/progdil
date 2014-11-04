@@ -67,7 +67,7 @@
             $(document).ready(function()
             {
                 $("#clear").on('click', function(){
-                    $("#sonuclar").html('');
+                    $("#result").html('');
                     randomName = [];
             });
 
