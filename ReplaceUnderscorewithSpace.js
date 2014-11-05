@@ -4,14 +4,14 @@
 <style type="text/css">
 	      .Underscore textarea {
 	               	width:100%;
-  	                font-size:40px;
+  	                font-size:30px;
 	 	        color:black;
 	                border:solid 0px black;
  	                height:auto;
       	      }
 	      .btn {
 	              	width :100%;
-	               	height:50px;
+	               	height:40px;
 	              	background-color:red;
 		        color:yellow;
 		        border:solid 0px black;
