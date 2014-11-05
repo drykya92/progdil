@@ -113,7 +113,7 @@ var randomName = [];
             function press(array_names)		// argüman aldığı string dizisini alt alta yazdırmak için kullanılıyor.
             {
                 var toWrite = "";
-                randomName.forEach(function(word) 	//forEach döngüsünde array_names dizisinin bütün elemanlarını aralarına <br> etiketi eklenerek toWrite stringine ekleniyor.
+                array_names.forEach(function(word) 	//forEach döngüsünde array_names dizisinin bütün elemanlarını aralarına <br> etiketi eklenerek toWrite stringine ekleniyor.
                 {
                     toWrite += word + "<br>";
                 });
