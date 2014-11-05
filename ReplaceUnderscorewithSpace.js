@@ -68,7 +68,7 @@
     <fieldset class='Underscore'>
 	<legend>Enter String</legend>
 	<textarea id='UnderscoreTxt' cols="55" rows="5"></textarea>
-	<a href='#' id="x" onclick="s" class='btn'>Replace</a>
+	<a href='#' id="x" onclick="U" class='btn'>Replace</a>
      
     </fieldset>
     </form>
